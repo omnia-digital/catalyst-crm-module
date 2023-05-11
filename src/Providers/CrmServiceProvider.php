@@ -2,10 +2,9 @@
 
 namespace OmniaDigital\Catalyst\CrmModule\Providers;
 
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\ServiceProvider;
 use Filament\PluginServiceProvider;
 use OmniaDigital\Catalyst\Crm\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Package;
 
 class CrmServiceProvider extends PluginServiceProvider
@@ -21,7 +20,6 @@ class CrmServiceProvider extends PluginServiceProvider
      */
     protected $moduleNameLower = 'crm';
 
-
     /**
      * Boot the application events.
      *
@@ -32,7 +30,7 @@ class CrmServiceProvider extends PluginServiceProvider
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
-        $this->loadMigrationsFrom(__DIR__ .'/../database/Migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/Migrations');
     }
 
     /**
@@ -52,13 +50,13 @@ class CrmServiceProvider extends PluginServiceProvider
      */
     public function registerViews()
     {
-        $viewPath = resource_path('views/modules/' . $this->moduleNameLower);
+        $viewPath = resource_path('views/modules/'.$this->moduleNameLower);
 
-        $sourcePath = __DIR__ .'/../resources/views';
+        $sourcePath = __DIR__.'/../resources/views';
 
         $this->publishes([
             $sourcePath => $viewPath,
-        ], ['views', $this->moduleNameLower . '-module-views']);
+        ], ['views', $this->moduleNameLower.'-module-views']);
 
         $this->loadViewsFrom(array_merge($this->getPublishableViewPaths(), [$sourcePath]), $this->moduleNameLower);
     }
@@ -70,12 +68,12 @@ class CrmServiceProvider extends PluginServiceProvider
      */
     public function registerTranslations()
     {
-        $langPath = resource_path('lang/modules/' . $this->moduleNameLower);
+        $langPath = resource_path('lang/modules/'.$this->moduleNameLower);
 
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, $this->moduleNameLower);
         } else {
-            $this->loadTranslationsFrom(__DIR__ .'/../resources/lang', $this->moduleNameLower);
+            $this->loadTranslationsFrom(__DIR__.'/../resources/lang', $this->moduleNameLower);
         }
     }
 
@@ -97,10 +95,10 @@ class CrmServiceProvider extends PluginServiceProvider
     protected function registerConfig()
     {
         $this->publishes([
-            __DIR__ .'/../config/config.php' => config_path($this->moduleNameLower . '.php'),
+            __DIR__.'/../config/config.php' => config_path($this->moduleNameLower.'.php'),
         ], 'config');
         $this->mergeConfigFrom(
-            __DIR__ .'/../config/config.php', $this->moduleNameLower
+            __DIR__.'/../config/config.php', $this->moduleNameLower
         );
     }
 
@@ -108,8 +106,8 @@ class CrmServiceProvider extends PluginServiceProvider
     {
         $paths = [];
         foreach (Config::get('view.paths') as $path) {
-            if (is_dir($path . '/modules/' . $this->moduleNameLower)) {
-                $paths[] = $path . '/modules/' . $this->moduleNameLower;
+            if (is_dir($path.'/modules/'.$this->moduleNameLower)) {
+                $paths[] = $path.'/modules/'.$this->moduleNameLower;
             }
         }
 
@@ -147,5 +145,4 @@ class CrmServiceProvider extends PluginServiceProvider
     {
         $package->name(static::$name);
     }
-
 }
