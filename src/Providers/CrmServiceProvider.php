@@ -1,6 +1,6 @@
 <?php
 
-namespace OmniaDigital\Catalyst\CrmModule\Providers;
+namespace OmniaDigital\Catalyst\Crm\Providers;
 
 use Filament\PluginServiceProvider;
 use OmniaDigital\Catalyst\Crm\Providers\RouteServiceProvider;
