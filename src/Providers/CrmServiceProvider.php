@@ -1,24 +1,24 @@
 <?php
 
-namespace OmniaDigital\Catalyst\SkeletonModule\Providers;
+namespace OmniaDigital\Catalyst\CrmModule\Providers;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 
-class SkeletonServiceProvider extends PluginServiceProvider
+class CrmServiceProvider extends PluginServiceProvider
 {
     //// Module Section ////
     /**
      * @var string
      */
-    protected $moduleName = 'Skeleton';
+    protected $moduleName = 'Crm';
 
     /**
      * @var string
      */
-    protected $moduleNameLower = 'skeleton';
+    protected $moduleNameLower = 'catalyst-crm-module';
 
 
     /**
@@ -116,7 +116,7 @@ class SkeletonServiceProvider extends PluginServiceProvider
     }
 
     //// Filament Plugin Section ////
-    public static string $name = 'skeleton-module';
+    public static string $name = 'catalyst-crm-module-module';
 
     protected array $resources = [
         // CustomResource::class,
@@ -131,15 +131,15 @@ class SkeletonServiceProvider extends PluginServiceProvider
     ];
 
     protected array $styles = [
-        'plugin-skeleton' => __DIR__.'/../resources/dist/skeleton.css',
+        'plugin-catalyst-crm-module' => __DIR__.'/../resources/dist/catalyst-crm-module.css',
     ];
 
     protected array $scripts = [
-        'plugin-skeleton' => __DIR__.'/../resources/dist/skeleton.js',
+        'plugin-catalyst-crm-module' => __DIR__.'/../resources/dist/catalyst-crm-module.js',
     ];
 
     // protected array $beforeCoreScripts = [
-    //     'plugin-skeleton' => __DIR__ . '/../resources/dist/skeleton.js',
+    //     'plugin-catalyst-crm-module' => __DIR__ . '/../resources/dist/catalyst-crm-module.js',
     // ];
 
     public function configurePackage(Package $package): void

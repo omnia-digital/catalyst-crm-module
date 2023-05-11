@@ -1,6 +1,6 @@
 <?php
 
-namespace OmniaDigital\Catalyst\SkeletonModule\Http\Livewire;
+namespace OmniaDigital\Catalyst\Crm\Http\Livewire;
 
 use Livewire\Component;
 
@@ -12,6 +12,6 @@ class Home extends Component
 
     public function render()
     {
-        return view('skeleton::livewire.home');
+        return view('crm::livewire.home');
     }
 }

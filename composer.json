@@ -1,22 +1,17 @@
 {
-    "name": "catalyst/skeleton-module",
-    "description": ":module_description",
+    "name": "omnia-digital/catalyst-crm-module",
+    "description": "CRM Module for Catalyst framework",
     "keywords": [
-        ":vendor_name",
+        "Omnia Digital",
         "laravel",
-        ":package_slug"
+        "catalyst-crm-module"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/omnia-digital/catalyst-crm-module",
     "license": "MIT",
     "authors": [
         {
             "name": "Josh Torres",
             "email": "josht@omniadigital.io",
-            "role": "Developer"
-        },
-        {
-            "name": ":author_name",
-            "email": "author@domain.com",
             "role": "Developer"
         }
     ],
@@ -46,13 +41,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "OmniaDigital\\Crm\\": "src",
+            "OmniaDigital\\Crm\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "OmniaDigital\\Crm\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -75,10 +70,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\Providers\\SkeletonServiceProvider"
+                "OmniaDigital\\Crm\\Providers\\CrmServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "Crm": "OmniaDigital\\Crm\\Facades\\Crm"
             }
         }
     },

@@ -1,11 +1,11 @@
 {
-    "name": "Skeleton",
-    "alias": "skeleton",
+    "name": "Crm",
+    "alias": "crm",
     "description": "",
     "keywords": [],
     "priority": 0,
     "providers": [
-        "Modules\\Forms\\Providers\\SkeletonServiceProvider"
+        "OmniaDigital\\Catalyst\\Crm\\Providers\\CrmServiceProvider"
     ],
     "aliases": {},
     "files": [],

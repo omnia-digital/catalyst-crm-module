@@ -11,8 +11,8 @@
 |
 */
 
-namespace OmniaDigital\Catalyst\SkeletonModule\Http\Livewire;
+namespace OmniaDigital\Catalyst\CrmModule\Http\Livewire;
 
-Route::name('skeleton.')->prefix('skeleton')->group(function () {
-    Route::get('/skeleton/{form}', Home::class)->name('form');
+Route::name('catalyst-crm-module.')->prefix('catalyst-crm-module')->group(function () {
+    Route::get('/catalyst-crm-module/{form}', Home::class)->name('form');
 });
