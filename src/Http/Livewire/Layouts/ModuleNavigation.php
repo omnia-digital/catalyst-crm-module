@@ -7,6 +7,7 @@ use Livewire\Component;
 class ModuleNavigation extends Component
 {
     public string $class;
+
     public array $navigation = [];
 
     public function mount()
