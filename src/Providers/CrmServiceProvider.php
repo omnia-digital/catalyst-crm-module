@@ -3,8 +3,8 @@
 namespace OmniaDigital\Catalyst\Crm\Providers;
 
 use Filament\PluginServiceProvider;
-use OmniaDigital\Catalyst\Crm\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Config;
+use OmniaDigital\Catalyst\Crm\Providers\RouteServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 
 class CrmServiceProvider extends PluginServiceProvider
