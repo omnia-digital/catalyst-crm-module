@@ -5,6 +5,7 @@ namespace OmniaDigital\Catalyst\CrmModule\Providers;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use Filament\PluginServiceProvider;
+use OmniaDigital\Catalyst\Crm\Providers\RouteServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 
 class CrmServiceProvider extends PluginServiceProvider
@@ -18,7 +19,7 @@ class CrmServiceProvider extends PluginServiceProvider
     /**
      * @var string
      */
-    protected $moduleNameLower = 'catalyst-crm-module';
+    protected $moduleNameLower = 'crm';
 
 
     /**
@@ -116,7 +117,7 @@ class CrmServiceProvider extends PluginServiceProvider
     }
 
     //// Filament Plugin Section ////
-    public static string $name = 'catalyst-crm-module-module';
+    public static string $name = 'catalyst-crm-module';
 
     protected array $resources = [
         // CustomResource::class,
